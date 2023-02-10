@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('qualifications', function (Blueprint $table) {
             $table->id();
+            $table->string('qualification')->nullable();
+            $table->string('school_name')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

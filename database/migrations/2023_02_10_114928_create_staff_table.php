@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->id();
+            $table->string('title')->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('middle_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('contact')->nullable();
+            $table->string('passport')->nullable();
+            $table->string('qualification')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

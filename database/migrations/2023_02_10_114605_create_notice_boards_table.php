@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('notice_boards', function (Blueprint $table) {
             $table->id();
-            $table->string('message')->nullable();
+            $table->longText('message')->nullable();
             $table->string('message_image')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
