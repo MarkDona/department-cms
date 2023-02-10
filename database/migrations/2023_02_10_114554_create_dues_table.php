@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('dues', function (Blueprint $table) {
             $table->id();
+            $table->string('dues_for')->nullable();
+            $table->string('amount')->nullable();
+            $table->string('academic_year')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

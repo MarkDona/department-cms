@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('dues_payments', function (Blueprint $table) {
             $table->id();
+            $table->string('student_id')->nullable();
+            $table->string('amount')->nullable();
+            $table->string('dues_for_level')->nullable();
+            $table->string('dues_id')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
