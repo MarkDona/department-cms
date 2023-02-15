@@ -23,6 +23,16 @@
                                     </span>
                                 @enderror
                             </div>
+
+                            <div class="col-md-6">
+                                <input id="index_number" type="text" class="form-control @error('index_number') is-invalid @enderror" name="index_number" value="{{ old('index_number') }}" required autocomplete="name" autofocus>
+
+                                @error('index_number')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
 
                         <div class="row mb-3">
