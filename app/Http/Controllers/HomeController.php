@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function get_duespayments()
+    {
+        return view('pages.dues_payment.index');
+    }
 }

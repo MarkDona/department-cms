@@ -23,4 +23,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+
+Route::get('payments',[HomeController::class, 'get_duespayments'])->name('payments');
+
 Route::get('/logout',[LogoutController::class, 'perform_logout'])->name('logout_user');
