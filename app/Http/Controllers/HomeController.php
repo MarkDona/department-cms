@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('pages.noticeboard.index');
     }
+
+    public function get_bio_data()
+    {
+       return view('pages.student.index');
+    }
 }

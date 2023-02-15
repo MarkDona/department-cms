@@ -26,5 +26,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('payments',[HomeController::class, 'get_duespayments'])->name('payments');
 Route::get('noticeboard',[HomeController::class, 'get_noticeboard'])->name('noticeboard');
+Route::get('biodata',[HomeController::class, 'get_bio_data'])->name('biodata');
 
 Route::get('/logout',[LogoutController::class, 'perform_logout'])->name('logout_user');

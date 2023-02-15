@@ -22,7 +22,7 @@
             </li>
             <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Apps &amp; Pages</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href=""><i data-feather='user'></i>
+            <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('biodata')}}"><i data-feather='user'></i>
                     <span class="menu-title text-truncate" data-i18n="Email">Bio Data</span></a>
             </li>
             <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('noticeboard')}}"><i data-feather="message-square"></i>
