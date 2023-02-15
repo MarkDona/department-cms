@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('pages.dues_payment.index');
     }
+
+    public function get_noticeboard()
+    {
+        return view('pages.noticeboard.index');
+    }
 }

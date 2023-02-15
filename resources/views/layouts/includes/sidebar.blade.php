@@ -25,7 +25,7 @@
             <li class=" nav-item"><a class="d-flex align-items-center" href=""><i data-feather='user'></i>
                     <span class="menu-title text-truncate" data-i18n="Email">Bio Data</span></a>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href=""><i data-feather="message-square"></i>
+            <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('noticeboard')}}"><i data-feather="message-square"></i>
                     <span class="menu-title text-truncate" data-i18n="Chat">Announcements</span></a>
             </li>
             <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('payments')}}"><i data-feather='dollar-sign'></i>
