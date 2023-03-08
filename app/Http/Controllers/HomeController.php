@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dues;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,12 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('home');
     }
 
     public function get_duespayments()
     {
-        return view('pages.dues_payment.index');
+        $fetch_dues = Dues::all()->first();
+        return view('pages.dues_payment.index', compact('fetch_dues'));
     }
 
     public function get_noticeboard()
@@ -38,6 +42,8 @@ class HomeController extends Controller
 
     public function get_bio_data()
     {
-       return view('pages.student.index');
+        $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
+//        dd($my_data->index_number);
+       return view('pages.student.index', compact('my_data'));
     }
 }
