@@ -39,7 +39,24 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('donatus/assets/css/style.css')}}">
     <!-- END: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/forms/select/select2.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/animate/animate.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/extensions/sweetalert2.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/css/plugins/forms/form-validation.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/css/plugins/extensions/ext-component-sweet-alerts.css')}}">
+    <!-- END: Page CSS-->
 
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="{{asset('donatus/app-assets/css/plugins/forms/pickers/form-flat-pickr.css')}}">
+    <!-- END: Page CSS-->
 </head>
 <!-- END: Head-->
 
