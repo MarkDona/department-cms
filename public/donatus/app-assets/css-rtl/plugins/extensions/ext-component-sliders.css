@@ -112,12 +112,12 @@ _:-ms-lang(x), .slider-select {
 }
 
 .dark-layout .noUi-tooltip {
-  background-color : #161D31;
-  color : #B4B7BD;
+  background-color : #fff;
+  color : #000;
 }
 
 .dark-layout .noUi-pips, .dark-layout .noUi-value {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .noUi-marker {

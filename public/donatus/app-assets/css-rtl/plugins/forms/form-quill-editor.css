@@ -177,11 +177,11 @@
 }
 
 .dark-layout .ql-editor .ql-syntax {
-  background-color : #161D31;
+  background-color : #fff;
 }
 
 .dark-layout .ql-editor.ql-blank:before {
-  color : #B4B7BD;
+  color : #000;
 }
 
 [data-textdirection='rtl'] .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) i, [data-textdirection='rtl'] .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {

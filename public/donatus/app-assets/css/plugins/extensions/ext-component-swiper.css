@@ -218,7 +218,7 @@
     font-size: 1rem; } }
 
 .dark-layout .swiper-container:not(.swiper-parallax) .swiper-slide {
-  background-color: #161d31; }
+  background-color: #fff; }
 
 .dark-layout .swiper-container.swiper-centered-slides .swiper-slide {
   background-color: #0fc8f5; }

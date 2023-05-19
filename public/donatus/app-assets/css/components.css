@@ -3172,10 +3172,10 @@ body:after {
 .dark-layout .select2-container .select2-selection__placeholder {
   background: #283046;
   border-color: #3b4253;
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .select2-container .select2-selection__rendered {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .select2-container .select2-dropdown {
   background-color: #283046;
@@ -3423,7 +3423,7 @@ tr.group {
   -moz-appearance: textfield; }
 
 .dark-layout .bootstrap-touchspin.input-group .form-control {
-  background-color: #161d31; }
+  background-color: #fff; }
 
 .dark-layout .bootstrap-touchspin.disabled-touchspin .bootstrap-touchspin-injected .bootstrap-touchspin-down,
 .dark-layout .bootstrap-touchspin.disabled-touchspin .bootstrap-touchspin-injected .bootstrap-touchspin-up,

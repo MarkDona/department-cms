@@ -90,12 +90,12 @@ _:-ms-lang(x),
   background-color: #0fc8f5; }
 
 .dark-layout .noUi-tooltip {
-  background-color: #161d31;
-  color: #b4b7bd; }
+  background-color: #fff;
+  color: #000; }
 
 .dark-layout .noUi-pips,
 .dark-layout .noUi-value {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .noUi-marker {
   background: #3b4253; }

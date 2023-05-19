@@ -93,17 +93,17 @@
   display: none; }
 
 .dark-layout .jstree .jstree-container-ul .jstree-anchor {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .vakata-context.jstree-contextmenu {
   background: #0fc8f5;
   box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.24); }
 
 .dark-layout .vakata-context.jstree-contextmenu li a {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .vakata-context.jstree-contextmenu li.vakata-context-hover > a {
-  background-color: #161d31; }
+  background-color: #fff; }
 
 .dark-layout .vakata-context.jstree-contextmenu li.vakata-context-separator a {
   border-color: #3b4253; }

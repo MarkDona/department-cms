@@ -95,7 +95,7 @@
   -moz-appearance: textfield; }
 
 .dark-layout .bootstrap-touchspin.input-group .form-control {
-  background-color: #161d31; }
+  background-color: #fff; }
 
 .dark-layout .bootstrap-touchspin.disabled-touchspin .bootstrap-touchspin-injected .bootstrap-touchspin-down,
 .dark-layout .bootstrap-touchspin.disabled-touchspin .bootstrap-touchspin-injected .bootstrap-touchspin-up,

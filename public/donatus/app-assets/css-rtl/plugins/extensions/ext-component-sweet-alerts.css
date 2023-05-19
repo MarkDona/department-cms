@@ -60,7 +60,7 @@
 }
 
 .dark-layout .swal2-container .swal2-popup .swal2-title {
-  color : #D0D2D6;
+  color : #000;
 }
 
 .dark-layout .swal2-container .swal2-modal {
@@ -68,7 +68,7 @@
 }
 
 .dark-layout .swal2-container .swal2-modal .swal2-header .swal2-title {
-  color : #D0D2D6;
+  color : #000;
 }
 
 .dark-layout .swal2-container .swal2-modal .swal2-header .swal2-icon-text {
@@ -81,15 +81,15 @@
 
 .dark-layout .swal2-container .swal2-modal input.swal2-input {
   border-color : #3B4253;
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .swal2-container .swal2-modal .swal2-content, .dark-layout .swal2-container .swal2-modal .swal2-html-container {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .swal2-container .swal2-modal pre, .dark-layout .swal2-container .swal2-modal code {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .swal2-container .swal2-modal .swal2-input {
@@ -98,10 +98,10 @@
 
 .dark-layout .swal2-container .swal2-modal .swal2-footer {
   border-color : #3B4253;
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .swal2-container .swal2-validation-message {
-  background-color : #161D31;
-  color : #B4B7BD;
+  background-color : #fff;
+  color : #000;
 }

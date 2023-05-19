@@ -153,10 +153,10 @@
 
 .dark-layout #toast-container .toast {
   background-color: #0fc8f5;
-  color: #b4b7bd !important; }
+  color: #000 !important; }
 
 .dark-layout #toast-container .toast .toast-close-button {
-  color: #b4b7bd; }
+  color: #000; }
 
 @media (max-width: 575.98px) {
   [data-textdirection='rtl'] .toast .toast-close-button {

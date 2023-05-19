@@ -187,11 +187,11 @@
 
 .dark-layout #toast-container .toast {
   background-color : #0fc8f5;
-  color : #B4B7BD !important;
+  color : #000 !important;
 }
 
 .dark-layout #toast-container .toast .toast-close-button {
-  color : #B4B7BD;
+  color : #000;
 }
 
 @media (max-width: 575.98px) {

@@ -25,20 +25,20 @@
   outline: 0; }
 
 .dark-layout .context-menu-list {
-  background-color: #161d31;
+  background-color: #fff;
   border-color: #3b4253; }
 
 .dark-layout .context-menu-list .context-menu-item {
-  background-color: #161d31; }
+  background-color: #fff; }
 
 .dark-layout .context-menu-list .context-menu-item span {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .context-menu-list .context-menu-item.context-menu-hover > span {
   color: #df074c; }
 
 .dark-layout .context-menu-list .context-menu-item.context-menu-submenu:after {
-  border-color: transparent transparent transparent #b4b7bd; }
+  border-color: transparent transparent transparent #000; }
 
 [data-textdirection='rtl'] .context-menu-list {
   z-index: 1031 !important; }
@@ -58,4 +58,4 @@
   margin-left: 0; }
 
 [data-textdirection='rtl'] .dark-layout .context-menu-list .context-menu-item.context-menu-submenu:after {
-  border-color: transparent #b4b7bd transparent transparent; }
+  border-color: transparent #000 transparent transparent; }

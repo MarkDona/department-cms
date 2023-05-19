@@ -177,7 +177,7 @@
 }
 
 .dark-layout .bs-stepper .bs-stepper-header .line {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .bs-stepper .bs-stepper-header .step .step-trigger .bs-stepper-box {
@@ -185,7 +185,7 @@
 }
 
 .dark-layout .bs-stepper .bs-stepper-header .step .step-trigger .bs-stepper-label .bs-stepper-title {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .bs-stepper .bs-stepper-header .step .step-trigger .bs-stepper-label .bs-stepper-subtitle {

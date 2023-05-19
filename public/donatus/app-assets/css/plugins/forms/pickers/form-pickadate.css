@@ -38,17 +38,17 @@
   height: 10px !important; }
 
 .dark-layout .picker__holder {
-  background-color: #161d31;
+  background-color: #fff;
   border-color: #3b4253; }
 
 .dark-layout .picker__holder .picker__header .picker__month,
 .dark-layout .picker__holder .picker__header .picker__year {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .picker__holder .picker__header .picker__select--year,
 .dark-layout .picker__holder .picker__header .picker__select--month {
-  color: #b4b7bd;
-  background-color: #161d31;
+  color: #000;
+  background-color: #fff;
   border-color: #3b4253; }
 
 .dark-layout .picker__holder .picker__header .picker__nav--next:hover,
@@ -59,10 +59,10 @@
   border-color: #3b4253; }
 
 .dark-layout .picker__holder .picker__table thead tr .picker__weekday {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .picker__holder .picker__table tbody tr td .picker__day {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .picker__holder .picker__table tbody tr td .picker__day.picker__day--selected {
   color: #fff; }
@@ -78,7 +78,7 @@
   color: #fff; }
 
 .dark-layout .picker__holder .picker__table tbody tr td .picker__day.picker__day--disabled {
-  color: #b4b7bd;
+  color: #000;
   opacity: 0.5;
   background: #0fc8f5; }
 
@@ -88,8 +88,8 @@
 .dark-layout .picker__holder .picker__footer .picker__button--today,
 .dark-layout .picker__holder .picker__footer .picker__button--clear,
 .dark-layout .picker__holder .picker__footer .picker__button--close {
-  background-color: #161d31;
-  color: #b4b7bd; }
+  background-color: #fff;
+  color: #000; }
 
 .dark-layout .picker__holder .picker__footer .picker__button--today:hover,
 .dark-layout .picker__holder .picker__footer .picker__button--clear:hover,
@@ -97,7 +97,7 @@
   background-color: #3b4253; }
 
 .dark-layout .picker--time .picker__holder .picker__list {
-  background-color: #161d31; }
+  background-color: #fff; }
 
 .dark-layout .picker--time .picker__holder .picker__list .picker__list-item:not(.picker__list-item--selected):hover {
   background-color: #0fc8f5; }
@@ -108,8 +108,8 @@
   opacity: 0.5; }
 
 .dark-layout .picker--time .picker__holder .picker__list .picker__button--clear {
-  background-color: #161d31;
-  color: #b4b7bd; }
+  background-color: #fff;
+  color: #000; }
 
 [dir='rtl'] .picker__nav--prev:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236e6b7b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E"); }

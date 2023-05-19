@@ -49,13 +49,13 @@
   color: #6e6b7b; }
 
 .dark-layout .swal2-container .swal2-popup .swal2-title {
-  color: #d0d2d6; }
+  color: #000; }
 
 .dark-layout .swal2-container .swal2-modal {
   background-color: #0fc8f5; }
 
 .dark-layout .swal2-container .swal2-modal .swal2-header .swal2-title {
-  color: #d0d2d6; }
+  color: #000; }
 
 .dark-layout .swal2-container .swal2-modal .swal2-header .swal2-icon-text {
   color: inherit; }
@@ -68,23 +68,23 @@
 
 .dark-layout .swal2-container .swal2-modal input.swal2-input {
   border-color: #3b4253;
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .swal2-container .swal2-modal .swal2-content,
 .dark-layout .swal2-container .swal2-modal .swal2-html-container {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .swal2-container .swal2-modal pre,
 .dark-layout .swal2-container .swal2-modal code {
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .swal2-container .swal2-modal .swal2-input {
   background-color: #0fc8f5; }
 
 .dark-layout .swal2-container .swal2-modal .swal2-footer {
   border-color: #3b4253;
-  color: #b4b7bd; }
+  color: #000; }
 
 .dark-layout .swal2-container .swal2-validation-message {
-  background-color: #161d31;
-  color: #b4b7bd; }
+  background-color: #fff;
+  color: #000; }

@@ -8,7 +8,7 @@
   background: linear-gradient(180deg, #0fc8f5 44%, rgba(40, 48, 70, 0.51) 73%, rgba(40, 48, 70, 0)); }
 
 .semi-dark-layout .main-menu:not(.expanded) .navigation .sidebar-group-active > a {
-  background-color: #161d31 !important; }
+  background-color: #fff !important; }
 
 .semi-dark-layout .main-menu-content .navigation-main {
   background-color: #0fc8f5; }
@@ -17,14 +17,14 @@
   color: #676d7d; }
 
 .semi-dark-layout .main-menu-content .navigation-main .nav-item a {
-  color: #b4b7bd; }
+  color: #000; }
 
 .semi-dark-layout .main-menu-content .navigation-main .nav-item.open:not(.sidebar-group-active) > a {
-  background-color: #161d31; }
+  background-color: #fff; }
 
 .semi-dark-layout .main-menu-content .navigation-main .nav-item a:after,
 .semi-dark-layout .main-menu-content .navigation-main .nav-item a {
-  color: #b4b7bd !important; }
+  color: #000 !important; }
 
 .semi-dark-layout .main-menu-content .navigation-main .nav-item .menu-content {
   background-color: #0fc8f5; }
@@ -55,5 +55,5 @@
   background-color: transparent; }
 
 .semi-dark-layout .menu-collapsed .main-menu:not(.expanded) .navigation-main li.active > a {
-  background: #161d31 !important;
+  background: #fff !important;
   color: #fff !important; }

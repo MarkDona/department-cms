@@ -918,22 +918,22 @@ window.colors = {
           'box-shadow': '0 4px 20px 0 rgba(0,0,0,.05)'
         });
         $('.horizontal-menu.dark-layout .header-navbar.navbar-fixed').css({
-          background: '#161d31',
+          background: '#fff',
           'box-shadow': '0 4px 20px 0 rgba(0,0,0,.05)'
         });
         $('html:not(.dark-layout) .horizontal-menu .horizontal-menu-wrapper.header-navbar').css('background', '#fff');
-        $('.dark-layout .horizontal-menu .horizontal-menu-wrapper.header-navbar').css('background', '#161d31');
+        $('.dark-layout .horizontal-menu .horizontal-menu-wrapper.header-navbar').css('background', '#fff');
       } else {
         $('html:not(.dark-layout) .horizontal-menu .header-navbar.navbar-fixed').css({
           background: '#f8f8f8',
           'box-shadow': 'none'
         });
         $('.dark-layout .horizontal-menu .header-navbar.navbar-fixed').css({
-          background: '#161d31',
+          background: '#fff',
           'box-shadow': 'none'
         });
         $('html:not(.dark-layout) .horizontal-menu .horizontal-menu-wrapper.header-navbar').css('background', '#fff');
-        $('.dark-layout .horizontal-menu .horizontal-menu-wrapper.header-navbar').css('background', '#161d31');
+        $('.dark-layout .horizontal-menu .horizontal-menu-wrapper.header-navbar').css('background', '#fff');
       }
     }
   });

@@ -38,17 +38,17 @@
 }
 
 .dark-layout .picker__holder {
-  background-color : #161D31;
+  background-color : #fff;
   border-color : #3B4253;
 }
 
 .dark-layout .picker__holder .picker__header .picker__month, .dark-layout .picker__holder .picker__header .picker__year {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .picker__holder .picker__header .picker__select--year, .dark-layout .picker__holder .picker__header .picker__select--month {
-  color : #B4B7BD;
-  background-color : #161D31;
+  color : #000;
+  background-color : #fff;
   border-color : #3B4253;
 }
 
@@ -61,11 +61,11 @@
 }
 
 .dark-layout .picker__holder .picker__table thead tr .picker__weekday {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .picker__holder .picker__table tbody tr td .picker__day {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .picker__holder .picker__table tbody tr td .picker__day.picker__day--selected {
@@ -86,7 +86,7 @@
 }
 
 .dark-layout .picker__holder .picker__table tbody tr td .picker__day.picker__day--disabled {
-  color : #B4B7BD;
+  color : #000;
   opacity : 0.5;
   background : #0fc8f5;
 }
@@ -96,8 +96,8 @@
 }
 
 .dark-layout .picker__holder .picker__footer .picker__button--today, .dark-layout .picker__holder .picker__footer .picker__button--clear, .dark-layout .picker__holder .picker__footer .picker__button--close {
-  background-color : #161D31;
-  color : #B4B7BD;
+  background-color : #fff;
+  color : #000;
 }
 
 .dark-layout .picker__holder .picker__footer .picker__button--today:hover, .dark-layout .picker__holder .picker__footer .picker__button--clear:hover, .dark-layout .picker__holder .picker__footer .picker__button--close:hover {
@@ -105,7 +105,7 @@
 }
 
 .dark-layout .picker--time .picker__holder .picker__list {
-  background-color : #161D31;
+  background-color : #fff;
 }
 
 .dark-layout .picker--time .picker__holder .picker__list .picker__list-item:not(.picker__list-item--selected):hover {
@@ -119,8 +119,8 @@
 }
 
 .dark-layout .picker--time .picker__holder .picker__list .picker__button--clear {
-  background-color : #161D31;
-  color : #B4B7BD;
+  background-color : #fff;
+  color : #000;
 }
 
 [dir='rtl'] .picker__nav--prev:before {

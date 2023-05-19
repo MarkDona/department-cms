@@ -31,16 +31,16 @@
 }
 
 .dark-layout .context-menu-list {
-  background-color : #161D31;
+  background-color : #fff;
   border-color : #3B4253;
 }
 
 .dark-layout .context-menu-list .context-menu-item {
-  background-color : #161D31;
+  background-color : #fff;
 }
 
 .dark-layout .context-menu-list .context-menu-item span {
-  color : #B4B7BD;
+  color : #000;
 }
 
 .dark-layout .context-menu-list .context-menu-item.context-menu-hover > span {
@@ -48,7 +48,7 @@
 }
 
 .dark-layout .context-menu-list .context-menu-item.context-menu-submenu:after {
-  border-color : transparent #B4B7BD transparent transparent;
+  border-color : transparent #000 transparent transparent;
 }
 
 [data-textdirection='rtl'] .context-menu-list {
@@ -75,5 +75,5 @@
 }
 
 [data-textdirection='rtl'] .dark-layout .context-menu-list .context-menu-item.context-menu-submenu:after {
-  border-color : transparent transparent transparent #B4B7BD;
+  border-color : transparent transparent transparent #000;
 }
