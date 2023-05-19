@@ -120,12 +120,12 @@
 }
 
 .dark-layout .apexcharts-canvas .apexcharts-tooltip {
-  background : #283046;
+  background : #0fc8f5;
   border-color : #3B4253;
 }
 
 .dark-layout .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title {
-  background : #283046 !important;
+  background : #0fc8f5 !important;
   border-color : #3B4253 !important;
   color : #FFFFFF;
 }

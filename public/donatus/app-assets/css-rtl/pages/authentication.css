@@ -159,12 +159,12 @@
 }
 
 .dark-layout .auth-wrapper .auth-bg {
-  background-color : #283046;
+  background-color : #0fc8f5;
 }
 
 @media (max-height: 825px) and (max-width: 991.98px) {
   .dark-layout .auth-wrapper .auth-inner {
-    background-color : #283046;
+    background-color : #0fc8f5;
   }
   .auth-wrapper .auth-bg {
     padding-top : 3rem;

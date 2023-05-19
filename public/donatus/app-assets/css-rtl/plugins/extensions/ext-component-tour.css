@@ -8,7 +8,7 @@
 }
 
 .shepherd-element[data-popper-placement='bottom'] .shepherd-arrow:before {
-  background-color : #7367F0 !important;
+  background-color : #df074c !important;
 }
 
 .shepherd-element[data-popper-placement='top'] {
@@ -28,7 +28,7 @@
 }
 
 .shepherd-element .shepherd-content .shepherd-header {
-  background-color : #7367F0;
+  background-color : #df074c;
   padding : 0.38rem 1.2rem;
   border-radius : 0.357rem 0.357rem 0 0;
 }
@@ -72,11 +72,11 @@
 }
 
 .dark-layout .shepherd-element {
-  background-color : #283046;
+  background-color : #0fc8f5;
 }
 
 .dark-layout .shepherd-element:not([data-popper-placement='bottom']) .shepherd-arrow:before {
-  background-color : #283046;
+  background-color : #0fc8f5;
 }
 
 .dark-layout .shepherd-element .shepherd-content .shepherd-text {

@@ -96,7 +96,7 @@
   color: #b4b7bd; }
 
 .dark-layout .vakata-context.jstree-contextmenu {
-  background: #283046;
+  background: #0fc8f5;
   box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.24); }
 
 .dark-layout .vakata-context.jstree-contextmenu li a {
@@ -112,5 +112,5 @@
   color: #676d7d; }
 
 .dark-layout .vakata-context.jstree-contextmenu li ul {
-  background: #283046;
+  background: #0fc8f5;
   box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.24); }
