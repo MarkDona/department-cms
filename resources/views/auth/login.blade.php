@@ -12,8 +12,8 @@
             <div class="content-body">
                 <div class="auth-wrapper auth-cover">
                     <div class="auth-inner row m-0">
-                        <!-- Brand logo--><a class="brand-logo" href="index.html">
-                            <h2 class="brand-text text-primary ms-1">Vuexy</h2>
+                        <!-- Brand logo--><a class="brand-logo" href="{{route('login')}}">
+                            <h2 class="brand-text text-primary ms-1">Department of Computer Science</h2>
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
@@ -24,7 +24,7 @@
                         <!-- Login-->
                         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                                <h2 class="card-title fw-bold mb-1">Welcome to CS DMS! 👋</h2>
+                                <h2 class="card-title fw-bold mb-1">Welcome to CS DMS!</h2>
                                 <p class="card-text mb-2">Please sign-in to continue</p>
 
                                 <form method="POST" action="{{ route('login') }}" class="auth-login-form mt-2">
@@ -63,10 +63,10 @@
                                     </div>
                                     <button class="btn btn-primary w-100" tabindex="4">Sign in</button>
                                 </form>
-                                <p class="text-center mt-2"><span>For Enquiries?</span><a href="#"><span>&nbsp;Click Here!</span></a></p>
-                                <div class="divider my-2">
-                                    <div class="divider-text">or</div>
-                                </div>
+{{--                                <p class="text-center mt-2"><span>For Enquiries?</span><a href="#"><span>&nbsp;Click Here!</span></a></p>--}}
+{{--                                <div class="divider my-2">--}}
+{{--                                    <div class="divider-text">or</div>--}}
+{{--                                </div>--}}
 {{--                                <div class="auth-footer-btn d-flex justify-content-center"><a class="btn btn-facebook" href="#"><i data-feather="facebook"></i></a><a class="btn btn-twitter white" href="#"><i data-feather="twitter"></i></a><a class="btn btn-google" href="#"><i data-feather="mail"></i></a><a class="btn btn-github" href="#"><i data-feather="github"></i></a></div>--}}
                             </div>
                         </div>
