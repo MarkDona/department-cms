@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,9 @@ Route::get('noticeboard',[HomeController::class, 'get_noticeboard'])->name('noti
 Route::get('biodata',[HomeController::class, 'get_bio_data'])->name('biodata');
 
 Route::get('/logout',[LogoutController::class, 'perform_logout'])->name('logout_user');
+
+Route::prefix('dcs-admin')->group(function (){
+    Route::get('/', [AdminLoginController::class, 'adminLoginForm'])->name('login.admin');
+    Route::post('/',[AdminLoginController::class, 'adminLogin'])->name('admin.login');
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+});
