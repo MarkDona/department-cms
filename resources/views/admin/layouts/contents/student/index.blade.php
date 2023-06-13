@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <div class="user-avatar-section">
                         <div class="d-flex align-items-center flex-column">
-                            <img class="img-fluid rounded mt-3 mb-2" src="{{asset('donatus/logos/user.png')}}"
+                            <img class="img-fluid rounded mt-3 mb-2" src="{{asset('vandek/logos/user.png')}}"
                                  height="110" width="110" alt="User avatar" />
                             <div class="user-info text-center">
                                 <h6 class="badge bg-light-secondary">{{$my_data->index_number ?? ''}}</h6>

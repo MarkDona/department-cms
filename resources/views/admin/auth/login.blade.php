@@ -12,13 +12,13 @@
             <div class="content-body">
                 <div class="auth-wrapper auth-cover">
                     <div class="auth-inner row m-0">
-                        <!-- Brand logo--><a class="brand-logo" href="{{route('login')}}">
+                        <!-- Brand logo--><a class="brand-logo" href="{{route('login.admin')}}">
                             <h2 class="brand-text text-primary ms-1">Department of Computer Science</h2>
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
-                            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="{{asset('donatus/app-assets/images/pages/login-v2-dark.svg')}}" alt="Login V2" /></div>
+                            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="{{asset('vandek/app-assets/images/pages/login-v2-dark.svg')}}" alt="Login V2" /></div>
                         </div>
                         <!-- /Left Text-->
                         <!-- Login-->
@@ -27,13 +27,13 @@
                                 <h2 class="card-title fw-bold mb-1">Welcome to CS DMS!</h2>
                                 <p class="card-text mb-2">Please sign-in to continue</p>
 
-                                <form method="POST" action="{{ route('login') }}" class="auth-login-form mt-2">
+                                <form method="POST" action="{{ route('admin.login') }}" class="auth-login-form mt-2">
                                     @csrf
                                     <div class="mb-1">
-                                        <label class="form-label" for="index_number">Index Number</label>
-                                        <input class="form-control @error('email') is-invalid @enderror" id="index_number" type="text" name="index_number"
-                                               placeholder="Index Number" aria-describedby="index_number" autofocus="" tabindex="1" value="{{ old('index_number') }}" required autocomplete="index_number"/>
-                                        @error('index_number')
+                                        <label class="form-label" for="username">Index Number</label>
+                                        <input class="form-control @error('username') is-invalid @enderror" id="username" type="text" name="username"
+                                               placeholder="Username" aria-describedby="username" autofocus="" tabindex="1" value="{{ old('username') }}" required autocomplete="index_number"/>
+                                        @error('username')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

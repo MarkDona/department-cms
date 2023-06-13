@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <div class="user-avatar-section">
                         <div class="d-flex align-items-center flex-column">
-                            <img class="img-fluid rounded mt-3 mb-2" src="{{asset('donatus/logos/user.png')}}"
+                            <img class="img-fluid rounded mt-3 mb-2" src="{{asset('vandek/logos/user.png')}}"
                                  height="110" width="110" alt="User avatar" />
                             <div class="user-info text-center">
                                 <h6 class="badge bg-light-secondary">{{$my_data->index_number ?? ''}}</h6>
@@ -57,20 +57,21 @@
             <div class="card">
                 <h4 class="card-header">Bio Data</h4>
                 <div class="card-body">
-                    <form class="needs-validation" method="POST" novalidate>
+                    <form id="update_profile" class="needs-validation" action="{{route('update_profile')}}" method="POST" novalidate>
                         @csrf
                         <div class="row">
                             <div class="mb-1 col-md-6">
-                                <label for="passport" class="form-label">Profile pic <i class="text-danger">*</i></label>
-                                <input class="form-control" type="file" id="passport" name="passport" required />
+                                <label for="passport" class="form-label">Profile pic</label>
+                                <input class="form-control" type="file" id="passport" name="passport" />
                                 <div class="invalid-feedback">Please upload passport picture</div>
                             </div>
                             <div class="mb-1 col-md-6">
                                 <label class="form-label" for="title">Title <i class="text-danger">*</i></label>
                                 <select class="form-select" id="title" name="title" required>
                                     <option value="{{$my_data->title ?? ''}}">{{$my_data->title ?? 'Select Title'}}</option>
-                                    <option value="usa">USA</option>
-                                    <option value="uk">UK</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Mrs.">Mrs.</option>
                                 </select>
 {{--                                <div class="valid-feedback">Looks good!</div>--}}
                                 <div class="invalid-feedback">Please select your title</div>

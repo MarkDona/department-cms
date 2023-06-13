@@ -19,6 +19,12 @@ return new class extends Migration
             $table->string('amount')->nullable();
             $table->string('dues_for_level')->nullable();
             $table->string('dues_id')->nullable();
+            $table->string('invoice_number')->unique();
+            $table->string('phone_number');
+            $table->string('type_of_payment');
+            $table->string('reference_number');
+            $table->double('amount');
+            $table->string('paid_by');
             $table->softDeletes();
             $table->timestamps();
         });

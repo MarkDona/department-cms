@@ -11,7 +11,7 @@
                         <a href="#">$48.9k</a>
                     </h3>
                     <button type="button" class="btn btn-primary">View Sales</button>
-                    <img src="{{asset('donatus/app-assets/images/illustration/badge.svg')}}" class="congratulation-medal" alt="Medal Pic" />
+                    <img src="{{asset('vandek/app-assets/images/illustration/badge.svg')}}" class="congratulation-medal" alt="Medal Pic" />
                 </div>
             </div>
         </div>
