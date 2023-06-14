@@ -13,7 +13,9 @@ function payWithPaystack(e) {
         currency: 'GHS',
         metadata: {
             'birth': {
-                'contact': $('#contact').val(),
+                'phone_number': $('#phone_number').val(),
+                'level': $('#level').val(),
+                'student_id': $('#student_id').val(),
             }
         },
         ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you

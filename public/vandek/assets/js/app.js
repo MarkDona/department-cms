@@ -14,6 +14,12 @@ $(document).ready(function () {
         modal('addInstitution', 'show')
     })
 
+    $(document).ready(function () {
+        $('.payNow').click(function () {
+            modal('payNow','show')
+        })
+    })
+
     // student update profile
     let update_profile = $('#update_profile')
     update_profile.submit(function (e) {

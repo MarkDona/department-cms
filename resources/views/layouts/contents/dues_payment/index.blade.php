@@ -1,4 +1,13 @@
-<section class="app-user-view-billing">
+@include('modals.paynow')
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <section class="app-user-view-billing">
     <div class="row">
         <!-- User Sidebar -->
         <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
@@ -17,9 +26,7 @@
                     </div>
                     <span>Pay your dues before examination begins</span>
                     <div class="d-grid w-100 mt-2">
-                        <button class="btn btn-primary" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">
-                            Pay Dues
-                        </button>
+                        <button type="submit" class="btn btn-primary payNow"data-bs-toggle="modal" data-bs-target="#payNow">Pay Now</button>
                     </div>
                 </div>
             </div>

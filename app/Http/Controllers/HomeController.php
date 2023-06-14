@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dues;
+use App\Models\NoticeBoard;
 use App\Models\Student;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -39,7 +41,9 @@ class HomeController extends Controller
 
     public function get_noticeboard()
     {
-        return view('pages.noticeboard.index');
+        $get_notices = NoticeBoard::all()->where('end_date','>',Carbon::today());
+//        dd($get_notices);
+        return view('pages.noticeboard.index', compact('get_notices'));
     }
 
     public function get_bio_data()

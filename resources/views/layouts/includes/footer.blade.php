@@ -60,6 +60,7 @@
 
 <!-- BEGIN: Page JS-->
 <script src="{{asset('vandek/app-assets/js/scripts/pages/app-email.js')}}"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
 <!-- END: Page JS-->
 <script>
     $(window).on('load', function() {
