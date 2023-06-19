@@ -1,1 +1,13 @@
-<iframe src="{{url('https://directory.htu.edu.gh/compsci')}}">Your browser isn't compatible</iframe>
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <section class="app-user-view-billing">
+                <div class="row">
+                    <iframe src="{{$staffs}}">Your browser isn't compatible</iframe>
+                </div>
+            </section>

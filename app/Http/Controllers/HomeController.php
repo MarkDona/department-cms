@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dues;
+use App\Models\DuesPayment;
 use App\Models\NoticeBoard;
 use App\Models\Student;
 use App\Models\User;
@@ -36,7 +37,8 @@ class HomeController extends Controller
     public function get_duespayments()
     {
         $fetch_dues = Dues::all()->first();
-        return view('pages.dues_payment.index', compact('fetch_dues'));
+        $fetch_trans = DuesPayment::all()->where('student_id', auth()->user()->index_number);
+        return view('pages.dues_payment.index', compact('fetch_dues','fetch_trans'));
     }
 
     public function get_noticeboard()
@@ -88,8 +90,8 @@ class HomeController extends Controller
 
     public function staff_directory()
     {
-        $staffs = Http::get('https://directory.htu.edu.gh/compsci');
-        dd($staffs);
+        $staffs = 'https://directory.htu.edu.gh/compsci';
+
         return view('pages.staff.index', compact('staffs'));
     }
 

@@ -47,19 +47,19 @@
                             <th>Invoice Number</th>
                             <th>Amount</th>
                             <th>Academic Year</th>
-                            <th>Level</th>
-                            <th>Action</th>
+                            <th>Status</th>
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($fetch_trans as $fetch_tran)
                         <tr>
-                            <td>1</td>
-                            <td>00004501</td>
-                            <td>GHc 50.00</td>
-                            <td>2022-2023</td>
-                            <td>100</td>
-                            <td>Donatus</td>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$fetch_tran->invoice_number}}</td>
+                            <td>GHC {{$fetch_tran->amount}}</td>
+                            <td>{{$fetch_tran->dues_for_level}}</td>
+                            <td>Payment Successful</td>
                         </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

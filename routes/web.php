@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\DuesPaymentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +28,9 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/payments',[HomeController::class, 'get_duespayments'])->name('payments');
+Route::any('/verify-payment', [DuesPaymentController::class, 'verifyPayment'])->name('pay.verify');
+
+Route::get('/verify-payment/{reference}', [DuesPaymentController::class, 'verify'])->name('pay.verify');
 Route::get('/noticeboard',[HomeController::class, 'get_noticeboard'])->name('noticeboard');
 Route::get('/biodata',[HomeController::class, 'get_bio_data'])->name('biodata');
 Route::post('/update_profile',[HomeController::class, 'update_biodata'])->name('update_profile');

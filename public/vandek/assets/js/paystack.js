@@ -12,10 +12,11 @@ function payWithPaystack(e) {
         amount: document.getElementById("amount").value * 100,
         currency: 'GHS',
         metadata: {
-            'birth': {
+            'csdms': {
                 'phone_number': $('#phone_number').val(),
-                'level': $('#level').val(),
-                'student_id': $('#student_id').val(),
+                'user_id': $('#user_index').val(),
+                'dues_index': $('#dues_index').val(),
+                'dues_year': $('#dues_year').val(),
             }
         },
         ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you

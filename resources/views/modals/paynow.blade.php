@@ -8,12 +8,15 @@
             <form id="paymentForm">
                 @csrf
                 <input type="hidden" name="email_address" id="email_address" value="{{Auth::user()->email}}">
+                <input type="hidden" name="user_index" id="user_index" value="{{Auth::user()->index_number}}">
+                <input type="hidden" name="dues_index" id="dues_index" value="{{$fetch_dues->id}}">
+                <input type="hidden" name="dues_year" id="dues_year" value="{{$fetch_dues->academic_year}}">
                 <div class="row">
                     <div class="mb-0 col-md-6">
                         <div class="modal-body">
                             <label>Phone Number:</label>
                             <div class="mb-1">
-                                <input type="text" name="contact" id="contact" maxlength="12" placeholder="0544000000" class="form-control"  required/>
+                                <input type="text" name="phone_number" id="phone_number" maxlength="12" placeholder="0544000000" class="form-control"  required/>
                             </div>
                         </div>
                     </div>
@@ -21,7 +24,7 @@
                         <div class="modal-body">
                             <label>Amount (GH₵): </label>
                             <div class="mb-1">
-                                <input type="text" name="amount" id="amount" value="80" class="form-control" readonly  required/>
+                                <input type="text" name="amount" id="amount" value="{{$fetch_dues->amount ?? ''}}" class="form-control" readonly  required/>
                             </div>
                         </div>
                     </div>

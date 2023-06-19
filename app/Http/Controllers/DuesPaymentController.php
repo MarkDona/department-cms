@@ -41,22 +41,19 @@ class DuesPaymentController extends Controller
             $smsinvoice = 'CS-DMS#'.mt_rand(10, 1000000);
 
             DuesPayment::create([
-                'user_id' => auth()->id(),
+                'dues_id' => $response->data->metadata->csdms->dues_index,
                 'invoice_number' => $smsinvoice,
                 'type_of_payment' => $response->data->channel,
-                'phone_number' => $response->data->metadata->birth->contact,
+                'student_id' => $response->data->metadata->csdms->user_id,
+                'phone_number' => $response->data->metadata->csdms->phone_number,
                 'reference_number' => $response->data->reference,
-                'status' => "SUCCESSFUL",
-                'used' => "NOT USED",
-                'amount' => ($response->data->amount / 100),
-                'paid_by' => auth()->user()->name
+                'dues_for_level' => $response->data->metadata->csdms->dues_year,
+                'amount' => ($response->data->amount / 100)
             ]);
 
             $message = 'Dear ' . auth()->user()->name .
-                ', \nYou have bought a voucher for birth certificate registration. Your Voucher number is '
-                . $smsinvoice . '.
-You can log into the WBBRS portal to complete your birth certificate registration.
-WBBRS we serve you better';
+                ', \nYou have successfully paid your departmental dues for the  '.$response->data->metadata->csdms->dues_year.
+            ' academic year';
             SMSController::sendSMS($phone, $message);
 
             return response()->json(['status' => 'success', 'message' => 'Payment made successfully!']);
