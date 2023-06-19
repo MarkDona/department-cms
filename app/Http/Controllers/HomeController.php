@@ -90,9 +90,48 @@ class HomeController extends Controller
 
     public function staff_directory()
     {
-        $staffs = 'https://directory.htu.edu.gh/compsci';
+//        $data['departments'] = [];
+//
+//        $data['department_staff'] = CURLOPT_URL([], "https://erp.htu.edu.gh/hr/api/staff_directory/department_staff?d=dept-ict", "GET");
+//        if (gettype($data['department_staff']) == "string") {
+//            $data['department_staff'] = [];
+//        }
+//        dd($data['department_staff']);
 
-        return view('pages.staff.index', compact('staffs'));
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "https://erp.htu.edu.gh/hr/api/staff_directory/department_staff?d=dept-compsci",// your preferred link
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_TIMEOUT => 30000,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                // Set Here Your Requesred Headers
+                'Content-Type: application/json',
+            ),
+        ));
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+
+            $vandek= (json_decode($response));
+//            dd($vandek);
+
+        }
+
+//        dd($jsonData);
+//            'https://directory.htu.edu.gh/compsci';
+
+        $research_gate = 'https://www.researchgate.net/profile/';
+        $staffs = $vandek;
+
+        return view('pages.staff.index', compact('staffs','research_gate'));
     }
 
 }
