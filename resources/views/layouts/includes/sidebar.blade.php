@@ -17,28 +17,28 @@
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item active"><a class="d-flex align-items-center" href="{{route('home')}}"><i data-feather="home"></i>
+            <li class=" nav-item {{ (request()->is('home*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('home')}}"><i data-feather="home"></i>
                     <span class="menu-title text-truncate" data-i18n="Dashboards">Dashboard</span></a>
             </li>
             <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Apps &amp; Pages</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('biodata')}}"><i data-feather='user'></i>
+            <li class=" nav-item {{ (request()->is('biodata*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('biodata')}}"><i data-feather='user'></i>
                     <span class="menu-title text-truncate" data-i18n="Email">Bio Data</span></a>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('noticeboard')}}"><i data-feather="message-square"></i>
+            <li class=" nav-item {{ (request()->is('noticeboard*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('noticeboard')}}"><i data-feather="message-square"></i>
                     <span class="menu-title text-truncate" data-i18n="Chat">Announcements</span></a>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('payments')}}"><i data-feather='dollar-sign'></i>
+            <li class=" nav-item {{ (request()->is('payments*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('payments')}}"><i data-feather='dollar-sign'></i>
                     <span class="menu-title text-truncate" data-i18n="Todo">Payments</span></a>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('staff_directory')}}"><i data-feather='activity'></i>
+            <li class=" nav-item {{ (request()->is('staff_directory*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('staff_directory')}}"><i data-feather='activity'></i>
                     <span class="menu-title text-truncate" data-i18n="Calendar">Lecturers Directory</span></a>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href=""><i data-feather='activity'></i>
+            <li class=" nav-item {{ (request()->is('my-activity-logs*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('my.logs')}}"><i data-feather='activity'></i>
                     <span class="menu-title text-truncate" data-i18n="Calendar">Activity Logs</span></a>
             </li>
-            <li class=" nav-item"><a class="d-flex align-items-center" href=""><i data-feather='paperclip'></i>
-                    <span class="menu-title text-truncate" data-i18n="Kanban">Reset Password</span></a>
+            <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('logout_user')}}"><i data-feather='power'></i>
+                    <span class="menu-title text-truncate" data-i18n="Kanban">Log Out</span></a>
             </li>
         </ul>
     </div>

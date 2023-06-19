@@ -36,6 +36,8 @@ Route::get('/biodata',[HomeController::class, 'get_bio_data'])->name('biodata');
 Route::post('/update_profile',[HomeController::class, 'update_biodata'])->name('update_profile');
 Route::get('/staff_directory',[HomeController::class, 'staff_directory'])->name('staff_directory');
 
+Route::get('/my-activity-logs',[HomeController::class,'get_activity_logs'])->name('my.logs');
+
 Route::get('/logout',[LogoutController::class, 'perform_logout'])->name('logout_user');
 
 Route::prefix('dcs-admin')->group(function (){

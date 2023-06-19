@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="my-auto">
-                                    <h4 class="fw-bolder mb-0">230k</h4>
+                                    <h4 class="fw-bolder mb-0">###</h4>
                                     <p class="card-text font-small-3 mb-0">Dues Paid</p>
                                 </div>
                             </div>
@@ -58,8 +58,8 @@
                                     </div>
                                 </div>
                                 <div class="my-auto">
-                                    <h4 class="fw-bolder mb-0">1.423k</h4>
-                                    <p class="card-text font-small-3 mb-0">Products</p>
+                                    <h4 class="fw-bolder mb-0">###</h4>
+                                    <p class="card-text font-small-3 mb-0">Levels</p>
                                 </div>
                             </div>
                         </div>

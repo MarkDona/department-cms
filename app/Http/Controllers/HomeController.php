@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ActivityLogs;
 use App\Models\Dues;
 use App\Models\DuesPayment;
 use App\Models\NoticeBoard;
@@ -31,11 +32,25 @@ class HomeController extends Controller
     public function index()
     {
 
+        ActivityLogs::create([
+            'user_id' => auth()->id(),
+            'user_name' => auth()->user()->index_number,
+            'description' => 'Logged in to dashboard successfully',
+            'time' => Carbon::now(),
+        ]);
+
         return view('home');
     }
 
     public function get_duespayments()
     {
+        ActivityLogs::create([
+            'user_id' => auth()->id(),
+            'user_name' => auth()->user()->index_number,
+            'description' => 'Viewed dues payment page',
+            'time' => Carbon::now(),
+        ]);
+
         $fetch_dues = Dues::all()->first();
         $fetch_trans = DuesPayment::all()->where('student_id', auth()->user()->index_number);
         return view('pages.dues_payment.index', compact('fetch_dues','fetch_trans'));
@@ -43,6 +58,13 @@ class HomeController extends Controller
 
     public function get_noticeboard()
     {
+        ActivityLogs::create([
+            'user_id' => auth()->id(),
+            'user_name' => auth()->user()->index_number,
+            'description' => 'viewed notice board',
+            'time' => Carbon::now(),
+        ]);
+
         $get_notices = NoticeBoard::all()->where('end_date','>',Carbon::today());
 //        dd($get_notices);
         return view('pages.noticeboard.index', compact('get_notices'));
@@ -50,6 +72,13 @@ class HomeController extends Controller
 
     public function get_bio_data()
     {
+        ActivityLogs::create([
+            'user_id' => auth()->id(),
+            'user_name' => auth()->user()->index_number,
+            'description' => 'Viewed profile page',
+            'time' => Carbon::now(),
+        ]);
+
         $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
 //        dd($my_data->index_number);
        return view('pages.student.index', compact('my_data'));
@@ -57,6 +86,13 @@ class HomeController extends Controller
 
     public function update_biodata(Request $request)
     {
+        ActivityLogs::create([
+            'user_id' => auth()->id(),
+            'user_name' => auth()->user()->index_number,
+            'description' => 'Updated profile successfully',
+            'time' => Carbon::now(),
+        ]);
+
         $this->validate($request,[
             'title' => 'required',
             'firstname' => 'required',
@@ -90,13 +126,12 @@ class HomeController extends Controller
 
     public function staff_directory()
     {
-//        $data['departments'] = [];
-//
-//        $data['department_staff'] = CURLOPT_URL([], "https://erp.htu.edu.gh/hr/api/staff_directory/department_staff?d=dept-ict", "GET");
-//        if (gettype($data['department_staff']) == "string") {
-//            $data['department_staff'] = [];
-//        }
-//        dd($data['department_staff']);
+        ActivityLogs::create([
+            'user_id' => auth()->id(),
+            'user_name' => auth()->user()->index_number,
+            'description' => 'Viewed lecturers directory',
+            'time' => Carbon::now(),
+        ]);
 
         $curl = curl_init();
 
@@ -132,6 +167,21 @@ class HomeController extends Controller
         $staffs = $vandek;
 
         return view('pages.staff.index', compact('staffs','research_gate'));
+    }
+
+    public function get_activity_logs()
+    {ActivityLogs::create([
+        'user_id' => auth()->id(),
+        'user_name' => auth()->user()->index_number,
+        'description' => 'Viewed activity logs',
+        'time' => Carbon::now(),
+    ]);
+
+        $all_activity = ActivityLogs::all()->where('user_id', auth()->user()->id);
+//        dd($all_activity);
+
+        return view('pages.logs', compact('all_activity'));
+
     }
 
 }

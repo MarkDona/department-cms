@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ActivityLogs;
 use App\Models\DuesPayment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class DuesPaymentController extends Controller
@@ -11,6 +13,15 @@ class DuesPaymentController extends Controller
     //    verify payStack payments
     public function verify($reference)
     {
+
+        ActivityLogs::create([
+            'user_id' => auth()->id(),
+            'user_name' => auth()->user()->index_number,
+            'description' => 'Paid dues successfully',
+            'time' => Carbon::now(),
+        ]);
+
+
         $SECRET_KEY = env('SECRET_KEY');
 
         $curl = curl_init();
