@@ -11,6 +11,8 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -39,7 +41,8 @@ class HomeController extends Controller
             'time' => Carbon::now(),
         ]);
 
-        return view('home');
+        $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
+        return view('home',compact('my_data'));
     }
 
     public function get_duespayments()
@@ -53,7 +56,10 @@ class HomeController extends Controller
 
         $fetch_dues = Dues::all()->first();
         $fetch_trans = DuesPayment::all()->where('student_id', auth()->user()->index_number);
-        return view('pages.dues_payment.index', compact('fetch_dues','fetch_trans'));
+
+        $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
+
+        return view('pages.dues_payment.index', compact('fetch_dues','fetch_trans','my_data'));
     }
 
     public function get_noticeboard()
@@ -66,8 +72,11 @@ class HomeController extends Controller
         ]);
 
         $get_notices = NoticeBoard::all()->where('end_date','>',Carbon::today());
+
+        $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
+
 //        dd($get_notices);
-        return view('pages.noticeboard.index', compact('get_notices'));
+        return view('pages.noticeboard.index', compact('get_notices','my_data'));
     }
 
     public function get_bio_data()
@@ -81,7 +90,9 @@ class HomeController extends Controller
 
         $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
 //        dd($my_data->index_number);
-       return view('pages.student.index', compact('my_data'));
+        $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
+
+       return view('pages.student.index', compact('my_data','my_data'));
     }
 
     public function update_biodata(Request $request)
@@ -102,6 +113,15 @@ class HomeController extends Controller
             'place_of_residence' => 'required',
         ]);
 
+        $passport_pic = null;
+        if ($request->hasFile('passport')) {
+            $file = $request->file('passport');
+            $ext = $file->getClientOriginalExtension();
+            $filename = auth()->user()->index_number . '.' . $ext;
+            Storage::disk('public')->put('Passport/' . $filename, File::get($file));
+            $passport_pic = $filename;
+        }
+
         $user_index = User::all()->where('id',auth()->id())->first();
         $student_id = Student::all()->where('index_number',$user_index->index_number)->first();
 //        dd($student_id->id);
@@ -111,6 +131,7 @@ class HomeController extends Controller
         $update_profile->title = $request->title;
         $update_profile->firstname = $request->firstname;
         $update_profile->lastname = $request->lastname;
+        $update_profile->passport = $passport_pic;
         $update_profile->email = $request->email;
         $update_profile->contact = $request->contact;
         $update_profile->place_of_residence = $request->place_of_residence;
@@ -166,7 +187,9 @@ class HomeController extends Controller
         $research_gate = 'https://www.researchgate.net/profile/';
         $staffs = $vandek;
 
-        return view('pages.staff.index', compact('staffs','research_gate'));
+        $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
+
+        return view('pages.staff.index', compact('staffs','research_gate','my_data'));
     }
 
     public function get_activity_logs()
@@ -178,9 +201,10 @@ class HomeController extends Controller
     ]);
 
         $all_activity = ActivityLogs::all()->where('user_id', auth()->user()->id);
+        $my_data = Student::all()->where('index_number',auth()->user()->index_number)->first();
 //        dd($all_activity);
 
-        return view('pages.logs', compact('all_activity'));
+        return view('pages.logs', compact('all_activity','my_data'));
 
     }
 

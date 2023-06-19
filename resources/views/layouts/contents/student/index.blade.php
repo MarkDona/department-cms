@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <div class="user-avatar-section">
                         <div class="d-flex align-items-center flex-column">
-                            <img class="img-fluid rounded mt-3 mb-2" src="{{asset('vandek/logos/user.png')}}"
+                            <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('storage/Passport/'.$my_data->passport) }}"
                                  height="110" width="110" alt="User avatar" />
                             <div class="user-info text-center">
                                 <h6 class="badge bg-light-secondary">{{$my_data->index_number ?? ''}}</h6>
@@ -65,7 +65,7 @@
             <div class="card">
                 <h4 class="card-header">Bio Data</h4>
                 <div class="card-body">
-                    <form id="update_profile" class="needs-validation" action="{{route('update_profile')}}" method="POST" novalidate>
+                    <form id="update_profile" class="needs-validation" action="{{route('update_profile')}}" method="POST" novalidate enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="mb-1 col-md-6">
